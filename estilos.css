@@ -1,0 +1,139 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+    color: #fdfdfd;
+    font-family: Arial, sans-serif;
+}
+
+.contenedor {
+    text-align: center;
+    animation: fadeIn 2s ease-in-out; /* Añade la animación de entrada al contenedor */
+}
+
+h1 {
+    font-size: 80px;
+    margin: 0;
+    color: #ffd700; /* Color dorado para el texto HOLA */
+    animation: slideIn 2s ease-out; /* Animación de deslizamiento */
+}
+
+p {
+    font-size: 24px;
+    margin: 20px 0;
+    animation: fadeIn 3s ease-in-out; /* Animación de desvanecimiento */
+}
+
+button {
+    background-color: #ffd700;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    color: #000;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    animation: bounceIn 2s ease-in-out; /* Animación de rebote */
+}
+
+button:hover {
+    background-color: #ffcc00;
+}
+
+/* Definición de animaciones */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px); /* Desliza desde arriba */
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.texto-iluminado {
+    color: rgb(255, 253, 255);
+    text-shadow: 0 0 10px rgba(255, 255, 0, 1), 0 0 20px rgba(255, 255, 0, 1), 0 0 30px rgba(255, 255, 0, 1);
+    transition: all 0.3s ease;
+}
+
+.texto-iluminado:hover {
+    text-shadow: 0 0 20px rgba(255, 255, 0, 1), 0 0 40px rgba(255, 255, 0, 1), 0 0 60px rgba(255, 255, 0, 1);
+}
+.boton-iluminado {
+    background-color: yellow;
+    color: black;
+    box-shadow: 0 0 10px rgba(255, 255, 0, 1), 0 0 20px rgba(255, 255, 0, 1), 0 0 30px rgba(255, 255, 0, 1);
+    transition: all 0.3s ease;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.boton-iluminado:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 0, 1), 0 0 40px rgba(255, 255, 0, 1), 0 0 60px rgba(255, 255, 0, 1);
+}
+.texto-iluminado span {
+    opacity: 0;
+    color: yellow;
+    text-shadow: 0 0 10px rgba(255, 255, 0, 1), 0 0 20px rgba(255, 255, 0, 1), 0 0 30px rgba(255, 255, 0, 1);
+    animation: iluminar 2s ease forwards;
+    animation-iteration-count: infinite; /* Repetir infinitamente */
+    animation-direction: alternate; /* Hace que la animación vaya y vuelva */
+    transition: all 0.3s ease;
+}
+
+.texto-iluminado span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.texto-iluminado span:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.texto-iluminado span:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.texto-iluminado span:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+@keyframes iluminar {
+    0% {
+        opacity: 0;
+        text-shadow: none;
+    }
+    100% {
+        opacity: 1;
+        text-shadow: 0 0 10px rgba(255, 255, 0, 1), 0 0 20px rgba(255, 255, 0, 1), 0 0 30px rgba(255, 255, 0, 1);
+    }
+}
